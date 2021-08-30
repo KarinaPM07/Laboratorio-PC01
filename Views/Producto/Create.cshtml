@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}">Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <h2>Producto</h2><br>
+    <center><h1>Formulario de Registro De Venta De Videojuegos</h1></center><br>
+	<div class="container">
+		<h1 th:text="${titulo}"
+			class="text-secondary border border-success border-top-0 border-left-0 border-right-0"></h1>
+
+		<div th:object="${Producto}" th:remove="tag">
+			<ul th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+				<li th:each="err: ${#fields.errors('*')}" th:text="${err}"></li>
+			</ul>
+		</div>
+		<form th:action="" th:object="${Producto}" method="post">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Id</label>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{Id}" class="form-control"
+                    th:errorclass="'form-control alert-danger'" /> <small
+                    class="form-text text-danger"
+                    th:if="${#fields.hasErrors('Id')}" th:errors="*{Id}"></small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Nombre</label>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{Nombre}" class="form-control"
+                    th:errorclass="'form-control alert-danger'" /> <small
+                    class="form-text text-danger"
+                    th:if="${#fields.hasErrors('Nombre')}" th:errors="*{Nombre}"></small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Categoria</label>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{Categoria}" class="form-control"
+                    th:errorclass="'form-control alert-danger'" /> <small
+                    class="form-text text-danger"
+                    th:if="${#fields.hasErrors('Categoria')}" th:errors="*{Categoria}"></small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Precio</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" th:field="*{Precio}"
+                    th:errorclass="'form-control alert-danger'" /> <small
+                    class="form-text text-danger"
+                    th:if="${#fields.hasErrors('Precio')}" th:errors="*{Precio}"></small>
+            </div>
+        </div>
+         <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Descuento</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" th:field="*{Descuento}"
+                    th:errorclass="'form-control alert-danger'" /> <small
+                    class="form-text text-danger"
+                    th:if="${#fields.hasErrors('Descuento')}" th:errors="*{Descuento}"></small>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <div class="col-sm-6">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </div>
+
+    </form>
+	</div>
+</body>
+</html>

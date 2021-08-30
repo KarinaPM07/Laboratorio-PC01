@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj": {}
+    "d:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj": {}
   },
   "projects": {
-    "D:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj": {
+    "d:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj",
+        "projectUniqueName": "d:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj",
         "projectName": "Laboratorio-PC01",
-        "projectPath": "D:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj",
+        "projectPath": "d:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\Laboratorio-PC01.csproj",
         "packagesPath": "C:\\Users\\karin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\obj\\",
+        "outputPath": "d:\\GitHup_Repositorios\\Laboratorio-PC01\\Laboratorio-PC01\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,28 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
